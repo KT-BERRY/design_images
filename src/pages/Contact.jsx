@@ -13,7 +13,7 @@ const Contact = () => {
   
     
     // Phone number of the company
-    const phoneNumber = '+919930376620'; // Replace with your company's phone number
+    const phoneNumber = '919930376620'; // Replace with your company's phone number
 
     // Function to handle clicking on the WhatsApp icon
     const handleWhatsAppClick = () => {
