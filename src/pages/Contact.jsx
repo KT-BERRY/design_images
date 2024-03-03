@@ -1,8 +1,19 @@
-
-
 const Contact = () => {
+    // Email address of the company
+    const emailAddress = 'nakshatra.aich2021@vitstudent.ac.in'; // Replace with your company's email address
+
+    // Function to handle clicking on the Email icon
+    const handleEmailClick = () => {
+      const subject = 'Inquiry'; // Subject of the email
+      const body = 'Dear ..., \n\n'; // Body of the email (you can customize it as needed)
+      
+      // Open Gmail with a new email drafting window
+      window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${emailAddress}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_blank');
+    };
+  
+    
     // Phone number of the company
-    const phoneNumber = '+919930376620'; // Replace with company's phone number
+    const phoneNumber = '1234567890'; // Replace with your company's phone number
 
     // Function to handle clicking on the WhatsApp icon
     const handleWhatsAppClick = () => {
@@ -32,6 +43,12 @@ const Contact = () => {
                     <div className="mb-4">
                         <label htmlFor="message" className="block text-gray-700">Subject</label>
                         <textarea id="message" name="message" rows="4" className="mt-1 p-2 border border-gray-300 rounded-md w-full"></textarea>
+                    </div>
+                    <div className="mb-4 flex items-center">
+                        <span className="block text-gray-700 mr-2">Contact us via Email:</span>
+                        <button type="button" onClick={handleEmailClick}>
+                            <img src="email_icon.png" alt="Email" className="w-8 h-8" />
+                        </button>
                     </div>
                     <div className="mb-4 flex items-center">
                         <span className="block text-gray-700 mr-2">Contact us via WhatsApp:</span>
